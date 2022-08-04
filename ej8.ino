@@ -56,21 +56,41 @@ void task1()
         
 
         // Evento 1
+
         if (btn1State == LOW && btn2State == LOW) 
             {
                 digitalWrite(ledRed, HIGH);
+                digitalWrite(ledGreen, LOW);
+                digitalWrite(ledBlue, LOW);
+                digitalWrite(ledYellow, LOW);
             }
+            
         // Evento 3
         if (btn1State == LOW && btn2State == HIGH) 
             {
                 digitalWrite(ledGreen, HIGH);
+                digitalWrite(ledRed, LOW);
+                digitalWrite(ledBlue, LOW);
+                digitalWrite(ledYellow, LOW);
             }
         // Evento 4
-        if (btn3State == LOW)
-            digitalWrite(ledBlue, HIGH);
+        if (btn1State == HIGH && btn2State == LOW) 
+            {
+                digitalWrite(ledRed, LOW);
+                digitalWrite(ledGreen, LOW);
+                digitalWrite(ledBlue, HIGH);
+                digitalWrite(ledYellow, LOW);
+            }
+
+       
         // Evento 5
-        if (btn4State == LOW)
-            digitalWrite(ledYellow, HIGH);
+        if (btn1State == HIGH && btn2State == HIGH) 
+            {
+                digitalWrite(ledRed, LOW);
+                digitalWrite(ledGreen, LOW);
+                digitalWrite(ledBlue, LOW);
+                digitalWrite(ledYellow, HIGH);
+            }    
 
         break;
     }
